@@ -1,0 +1,24 @@
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-offset-1 col-md-10">
+          <a class="btn btn-primary" href="http://localhost:3000/movies/">Back</a>
+          <a class="btn btn-warning" href="">Edit</a>
+          <a class="btn btn-danger" href="http://localhost:3000/delete_movie/<%= @id %>">Delete</a>
+
+          <h1><%= @title %></h1>
+
+          <img src="<%= @image %>">
+
+          <h3>Description</h3>
+          <p><%= @description %></p>
+
+          <h3>Year</h3>
+          <p><%= @year %></p>
+
+          <h3>Duration</h3>
+          <p><%= @duration %> minutes</p>
+
+        </div>
+    </div>
+</div>

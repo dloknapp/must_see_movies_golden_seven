@@ -1,0 +1,23 @@
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-offset-1 col-md-10">
+          <a class="btn btn-primary" href="http://localhost:3000/<%= @title.downcase %>">Back</a>
+          <a class="btn btn-warning" href="">Edit</a>
+          <a class="btn btn-danger" href="http://localhost:3000/delete_<%= @url %>/<%= @id %>">Delete</a>
+
+          <h1><%= @name %></h1>
+
+          <img src="<%= @image %>">
+
+          <h3>Bio</h3>
+          <p><%= @bio %></p>
+
+          <h3>Date of Birth</h3>
+          <p><%= @dob %></p>
+
+
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,38 @@
+<h1>Edit <%= @url.titlecase %></h1>
+
+<form action="http://localhost:3000/update_<%= @url %>/<%= @id %>" class = "form-horizontal">
+  <div class="form-group">
+    <label for="dob" class="col-sm-2 control-label">Dob</label>
+    <div class="col-sm-8">
+      <input id="dob" class="form-control col-sm-10" type="string" name="dob" value="<%= @i.dob %>">
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="name" class="col-sm-2 control-label">Name</label>
+    <div class="col-sm-8">
+      <input id="name" class="form-control col-sm-10" type="string" name="name" value="<%= @i.name %>">
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="bio" class="col-sm-2 control-label">Bio</label>
+    <div class="col-sm-8">
+      <input id="bio" class="form-control col-sm-10" type="text" name="bio" value="<%= @i.bio %>">
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="image" class="col-sm-2 control-label">Image url</label>
+    <div class="col-sm-8">
+      <input id="image" class="form-control col-sm-10" type="string" name="image_url" value="<%= @i.image_url %>">
+    </div>
+  </div>
+
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-8">
+      <button type="submit" class="btn btn-primary">Update <%= @url.titlecase %></button>
+    </div>
+  </div>
+
+</form>

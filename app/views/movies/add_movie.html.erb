@@ -1,0 +1,46 @@
+<h1>Add Movie</h1>
+
+<form action="http://localhost:3000/create_movie" class = "form-horizontal">
+  <div class="form-group">
+    <label for="title" class="col-sm-2 control-label">Title</label>
+    <div class="col-sm-8">
+      <input id="title" class="form-control col-sm-10" type="string" name="title" placeholder="Title">
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="year" class="col-sm-2 control-label">Year</label>
+    <div class="col-sm-8">
+      <input id="year" class="form-control col-sm-10" type="integer" name="year" placeholder="Year">
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="duration" class="col-sm-2 control-label">Duration</label>
+    <div class="col-sm-8">
+      <input id="duration" class="form-control col-sm-10" type="string" name="duration" placeholder="Duration">
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="description" class="col-sm-2 control-label">Description</label>
+    <div class="col-sm-8">
+      <input id="description" class="form-control col-sm-10" type="text" name="description" placeholder="Description">
+    </div>
+  </div>
+
+
+  <div class="form-group">
+    <label for="image" class="col-sm-2 control-label">Image url</label>
+    <div class="col-sm-8">
+      <input id="image" class="form-control col-sm-10" type="string" name="image_url" placeholder="Image url">
+    </div>
+  </div>
+
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-8">
+      <button type="submit" class="btn btn-primary">Add Movie</button>
+    </div>
+  </div>
+
+</form>

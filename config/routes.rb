@@ -1,4 +1,24 @@
 Rails.application.routes.draw do
+  get("/", { :controller => "movies" , :action => "index"})
+
+  get("/movies", { :controller => "movies", :action => "movie_list"})
+  get("/movies/new_form", { :controller => "movies" , :action => "add_movie"})
+  get("/movies/:id", { :controller => "movies" , :action => "individual_movie"})
+  get("/movies/:id/edit_form", { :controller => "movies" , :action => "edit_movie"})
+  get("/delete_movie/:id", { :controller => "movies" , :action => "delete_person"})
+  get("/create_movie", { :controller => "movies" , :action => "create_movie"})
+  get("/update_movie/:id", { :controller => "movies" , :action => "update_movie"})
+
+  get("/delete_:person_type/:id", { :controller => "movies" , :action => "delete_person"})
+  get("/create_:person_type", { :controller => "movies" , :action => "create_person"})
+  get("/update_:person_type/:id", { :controller => "movies" , :action => "update_person"})
+  get("/:person_type", { :controller => "movies" , :action => "person_list"})
+  get("/:person_type/new_form", { :controller => "movies" , :action => "add_person"})
+  get("/:person_type/:id", { :controller => "movies" , :action => "individual"})
+  get("/:person_type/:id/edit_form", { :controller => "movies" , :action => "edit_individual"})
+
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

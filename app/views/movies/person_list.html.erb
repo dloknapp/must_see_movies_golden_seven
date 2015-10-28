@@ -1,0 +1,31 @@
+<a href="http://localhost:3000/<%= @title.downcase %>/new_form" class="btn btn-primary">Add <%= @url %></a>
+
+<h1><%= @title %></h1>
+
+<table class="table table-bordered">
+  <tr>
+    <th>Name</th>
+    <th>Bio</th>
+    <th>DOB</th>
+    <th>Image</th>
+    <th></th>
+  </tr>
+  <% @person.each do |person| %>
+  <tr>
+    <td><a href="http://localhost:3000/<%= @title.downcase %>/<%= person.id %>"><%= person.name %></a></td>
+    <td><%= person.bio %></td>
+    <td><%= person.dob %></td>
+    <td><img src="<%= person.image_url %>"></td>
+    <td>
+      <a class="btn btn-primary" href="http://localhost:3000/<%= @title.downcase %>/<%= person.id %>">Show</a>
+      <p> </p>
+      <a class="btn btn-warning" href="http://localhost:3000/<%= @title.downcase %>/<%= person.id %>/edit_form">Edit</a>
+      <p> </p>
+      <a class="btn btn-danger" href="http://localhost:3000/delete_<%= @url %>/<%= person.id %>">Delete</a>
+    </td>
+
+
+  <% end %>
+
+
+</table>

@@ -1,0 +1,33 @@
+<a href="http://localhost:3000/movies/new_form" class="btn btn-primary">Add Movie</a>
+
+<h1>Movies</h1>
+
+<table class="table table-bordered">
+  <tr>
+    <th>Title</th>
+    <th>Year</th>
+    <th>Duration</th>
+    <th>Description</th>
+    <th>Image</th>
+    <th></th>
+  </tr>
+  <% @movies.each do |movie| %>
+  <tr>
+    <td><a href="http://localhost:3000/movies/<%= movie.id %>"><%= movie.title %></a></td>
+    <td><%= movie.year %></td>
+    <td><%= movie.duration %> minutes</td>
+    <td><%= movie.description %></td>
+    <td><img src="<%= movie.image_url %>"></td>
+    <td>
+      <a class="btn btn-primary" href="http://localhost:3000/movies/<%= movie.id %>">Show</a>
+      <p> </p>
+      <a class="btn btn-warning" href="http://localhost:3000/movies/<%= movie.id %>/edit_form">Edit</a>
+      <p> </p>
+      <a class="btn btn-danger" href="http://localhost:3000/delete_movie/<%= movie.id %>">Delete</a>
+    </td>
+
+
+  <% end %>
+
+
+</table>
